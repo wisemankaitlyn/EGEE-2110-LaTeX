@@ -20,10 +20,9 @@
 
 {\large \noindent Problem Set:}
 
-\par 7.4 [12, 14]
+\par 7.4 [2, 4, 18, 20]
 \par 7.7 [12, 14]
 \par 7.8 [4, 6, 8]
-\par 8.1 [3, 4, 6, 12, 14]
 \vspace{5mm}
 
 \noindent \hrulefill
@@ -31,8 +30,253 @@
 \section*{7.4}
 \setcounter{equation}{0}
 
-\subsection*{7.4 [12]}
-\subsection*{7.4 [14]}
+\subsection*{7.4 [2]}
+
+Find the rank.  Find a basis for the row space.  Find a basis for the column space.  \textit{Hint.}  Row-reduce the matrix and its transpose.  Row-reduce the matrix and its transpose.  (You may omit obvious factors from the vectors of these bases.) 
+
+\begin{center}
+    $\begin{bmatrix} 
+    a & b\\
+    b & a
+    \end{bmatrix}$
+\end{center}
+
+Let
+
+\begin{align}
+    \label{eq:1}
+    && \textbf{A} &= \begin{bmatrix} 
+    a & b\\
+    b & a
+    \end{bmatrix}
+    \\
+    \label{eq:2}
+    \textbf{R\textsubscript{2}} = \textbf{R\textsubscript{2}} + (-\frac{b}{a})\textbf{R\textsubscript{1}} \longrightarrow && &= \begin{bmatrix}
+    a & b\\
+    b - \frac{b}{a}(a) & a - \frac{b}{a}(b)
+    \end{bmatrix}
+    \\
+    \label{eq:3}
+    && &= \begin{bmatrix}
+    a & b\\
+    0 & \frac{a^2 - b^2}{a}
+    \end{bmatrix}
+    \\
+    \label{eq:4}
+    \eqref{eq:1}
+    && \textbf{A\textsuperscript{T}} &= \begin{bmatrix} 
+    a & b\\
+    b & a
+    \end{bmatrix}
+    \\
+    \label{eq:5}
+    \eqref{eq:1}
+    && &= \textbf{A}
+    \\
+    \label{eq:6}
+    \eqref{eq:3} && &= \begin{bmatrix}
+    a & b\\
+    0 & \frac{a^2 - b^2}{a}
+    \end{bmatrix}
+    \\
+    \label{eq:7}
+    \eqref{eq:3}, \eqref{eq:6} &&
+    \text{rank \textbf{A}} &= 2
+    \\
+    \label{eq:8}
+    \eqref{eq:3}, \eqref{eq:6} && \text{Both the row and column bases } &\text{are}
+    \{ \begin{bmatrix} a & b \end{bmatrix}, \begin{bmatrix}
+    0 & \frac{b^2 - a^2}{b}
+    \end{bmatrix} \}
+\end{align} 
+
+\subsection*{7.4 [4]}
+\setcounter{equation}{0}
+
+Find the rank.  Find a basis for the row space.  Find a basis for the column space.  \textit{Hint.}  Row-reduce the matrix and its transpose.  (You may omit obvious factors from the vectors of these bases.)
+
+Let
+
+\begin{align}
+    \label{eq:1}
+    && \textbf{B} &= \begin{bmatrix}
+    6 & -4 & 0\\
+    -4 & 0 & 2\\
+    0 & 2 & 6
+    \end{bmatrix}
+    \\
+    \label{eq:2}
+    \textbf{R\textsubscript{2}} = \textbf{R\textsubscript{2}} + \frac{2}{3}\textbf{R\textsubscript{1}} \longrightarrow && &= \begin{bmatrix}
+    6 & -4 & 0\\
+    -4 + \frac{2}{3}{6} & 0 - \frac{2}{3}(4) & 2\\
+    0 & 2 & 6
+    \end{bmatrix}
+    \\
+    \label{eq:3}
+    && &= \begin{bmatrix}
+    6 & -4 & 0\\
+    0 & -\frac{8}{3} & 2\\
+    0 & 2 & 6
+    \end{bmatrix}
+    \\
+    \label{eq:4}
+    \textbf{R\textsubscript{3}} = \textbf{R\textsubscript{3}} + \frac{3}{4}\textbf{R\textsubscript{2}} \longrightarrow && &= \begin{bmatrix}
+    6 & -4 & 0\\
+    0 & -\frac{8}{3} & 2\\
+    0 & 2+(\frac{3}{4})(-\frac{8}{3}) & 6 + \frac{3}{4}(2)
+    \end{bmatrix}
+    \\
+    \label{eq:5}
+    && &= \begin{bmatrix}
+    6 & -4 & 0\\
+    0 & -\frac{8}{3} & 2\\
+    0 & 0 & \frac{15}{2}
+    \end{bmatrix}
+    \\
+    \label{eq:6}
+    \eqref{eq:1} && \textbf{B\textsuperscript{T}} &= \begin{bmatrix}
+    6 & -4 & 0\\
+    -4 & 0 & 2\\
+    0 & 2 & 6
+    \end{bmatrix}
+    \\
+    \label{eq:7}
+    \eqref{eq:1} && &= \textbf{B}
+    \\
+    \label{eq:8}
+    \eqref{eq:5}, \eqref{eq:7} && \text{rank \textbf{A}} &= 3
+    \\
+    \label{eq:9}
+    \eqref{eq:5} && \text{A row-space basis} &\text{: } \{ \begin{bmatrix}6&-4&0\end{bmatrix}, \begin{bmatrix}0&-\frac{8}{3}&2\end{bmatrix}, \begin{bmatrix}0&0&\frac{15}{2}\end{bmatrix}\}
+    \\
+    \label{eq:10}
+    \eqref{eq:5}, \eqref{eq:7} && \text{A column-space basis} &\text{: } \{
+    \begin{bmatrix}6\\-4\\0\end{bmatrix}, \begin{bmatrix}
+    0\\-\frac{8}{3}\\2
+    \end{bmatrix}, \begin{bmatrix}
+    0\\0\\\frac{15}{2}
+    \end{bmatrix}\}
+\end{align}
+
+\subsection*{7.4 [18]}
+\setcounter{equation}{0}
+
+Are the following sets of vectors linearly independent?  Show the details of your work.
+
+$ \begin{bmatrix}1&\frac{1}{2}&\frac{1}{3}&\frac{1}{4}\end{bmatrix}, \begin{bmatrix}
+\frac{1}{2}&\frac{1}{3}&\frac{1}{4}&\frac{1}{5}
+\end{bmatrix}, \begin{bmatrix}
+\frac{1}{3}&\frac{1}{4}&\frac{1}{5}&\frac{1}{6}
+\end{bmatrix}, \begin{bmatrix}
+\frac{1}{4}&\frac{1}{5}&\frac{1}{6}&\frac{1}{7}
+\end{bmatrix}$
+
+Make a matrix:
+
+\begin{align}
+    \label{eq:1}
+    && &\text{ } \begin{bmatrix}
+    1&\frac{1}{2}&\frac{1}{3}&\frac{1}{4}\\
+    \frac{1}{2}&\frac{1}{3}&\frac{1}{4}&\frac{1}{5}\\
+    \frac{1}{3}&\frac{1}{4}&\frac{1}{5}&\frac{1}{6}\\
+    \frac{1}{4}&\frac{1}{5}&\frac{1}{6}&\frac{1}{7}
+    \end{bmatrix}
+    \\
+    \label{eq:2}
+    \textbf{R\textsubscript{2}} = \textbf{R\textsubscript{2}} - \frac{1}{2}\textbf{R\textsubscript{1}}\longrightarrow && &= \begin{bmatrix}
+    1&\frac{1}{2}&\frac{1}{3}&\frac{1}{4}\\
+    0&\frac{1}{12}&\frac{1}{12}&\frac{3}{40}\\
+    \frac{1}{3}&\frac{1}{4}&\frac{1}{5}&\frac{1}{6}\\
+    \frac{1}{4}&\frac{1}{5}&\frac{1}{6}&\frac{1}{7}
+    \end{bmatrix}
+    \\
+    \label{eq:3}
+    \textbf{R\textsubscript{3}} = \textbf{R\textsubscript{3}} - \frac{1}{3}\textbf{R\textsubscript{1}}, \textbf{R\textsubscript{4}} = \textbf{R\textsubscript{4}} - \frac{1}{4}\textbf{R\textsubscript{1}} \longrightarrow && &= \begin{bmatrix}
+    1&\frac{1}{2}&\frac{1}{3}&\frac{1}{4}\\
+    0&\frac{1}{12}&\frac{1}{12}&\frac{3}{40}\\
+    0&\frac{1}{12}&\frac{4}{45}&\frac{1}{12}\\
+    0&\frac{1}{30}&\frac{1}{12}&\frac{9}{112}
+    \end{bmatrix}
+    \\
+    \label{eq:4}
+    \textbf{R\textsubscript{3}} = \textbf{R\textsubscript{3}} - \textbf{R\textsubscript{2}}, \textbf{R\textsubscript{4}} = \textbf{R\textsubscript{4}} - \frac{2}{5}\textbf{R\textsubscript{2}} \longrightarrow && &= \begin{bmatrix}
+    1&\frac{1}{2}&\frac{1}{3}&\frac{1}{4}\\
+    0&\frac{1}{12}&\frac{1}{12}&\frac{3}{40}\\
+    0&0&\frac{1}{180}&\frac{1}{120}\\
+    0&0&\frac{1}{20}&\frac{141}{2800}
+    \end{bmatrix}
+    \\
+    \label{eq:5}
+    \textbf{R\textsubscript{4}} = \textbf{R\textsubscript{4}} - 9\textbf{R\textsubscript{3}} \longrightarrow && &= \begin{bmatrix}
+    1&\frac{1}{2}&\frac{1}{3}&\frac{1}{4}\\
+    0&\frac{1}{12}&\frac{1}{12}&\frac{3}{40}\\
+    0&0&\frac{1}{180}&\frac{1}{120}\\
+    0&0&0&-\frac{69}{2800}
+    \end{bmatrix}
+    \\
+    \label{eq:6}
+    &&
+    \text{rank } &= 4
+\end{align}
+
+The number of vectors and the rank of the matrix they form are both 4.  Hence, these vectors are \textbf{linearly independent}.
+
+\subsection*{7.4 [20]}
+\setcounter{equation}{0}
+
+Are the following sets of vectors linearly independent?  Show the details of your work.
+
+$
+\begin{bmatrix}
+1&2&3&4
+\end{bmatrix}, \begin{bmatrix}
+2&3&4&5
+\end{bmatrix}, \begin{bmatrix}
+3&4&5&6
+\end{bmatrix}, \begin{bmatrix}
+4&5&6&7
+\end{bmatrix}
+$
+
+Make a matrix:
+
+\begin{align}
+    \label{eq:1}
+    && &\text{ } \begin{bmatrix}
+    1&2&3&4\\
+    2&3&4&5\\
+    3&4&5&6\\
+    4&5&6&7
+    \end{bmatrix}
+    \\
+    \label{eq:2}
+    \begin{pmatrix}
+    \textbf{R\textsubscript{2}} = \textbf{R\textsubscript{2}} - 2\textbf{R\textsubscript{1}}\\
+    \textbf{R\textsubscript{3}} = \textbf{R\textsubscript{3}} - 3\textbf{R\textsubscript{1}}\\
+    \textbf{R\textsubscript{4}} = \textbf{R\textsubscript{4}} - 4\textbf{R\textsubscript{1}}
+    \end{pmatrix} \longrightarrow && &=\begin{bmatrix}
+    1&2&3&4\\
+    0&-1&-2&-3\\
+    0&-2&-4&-6\\
+    0&-3&-6&-9
+    \end{bmatrix}
+    \\
+    \label{eq:3}
+    \begin{pmatrix}
+    \textbf{R\textsubscript{3}} = \textbf{R\textsubscript{3}} - 2\textbf{R\textsubscript{2}}\\
+    \textbf{R\textsubscript{4}} = \textbf{R\textsubscript{4}} - 3\textbf{R\textsubscript{2}} 
+    \end{pmatrix} \longrightarrow && &= \begin{bmatrix}
+    1&2&3&4\\
+    0&-1&-2&-3\\
+    0&0&0&0\\
+    0&0&0&0
+    \end{bmatrix}
+    \\
+    \label{eq:4}
+    \eqref{eq:3} && \text{rank} &= 2
+\end{align}
+
+The number of vectors is 4, and the rank of the matrix they form is 2.  Hence, these vectors are \textbf{linearly dependent}.
 
 \newpage
 
@@ -40,21 +284,52 @@
 \setcounter{equation}{0}
 
 \subsection*{7.7 [12]}
+\setcounter{equation}{0}
 
-\subsubsection*{i) lorem :)}
+Showing the details, evaluate:
 
 \begin{align}
-    \label{eq:label}
-    have fun math time && &=
+    \label{eq:1}
+    && \begin{vmatrix}
+    a & b & c\\
+    c & a & b\\
+    b & c & a
+    \end{vmatrix} &= a\begin{vmatrix} a & b\\c & a \end{vmatrix} - b\begin{vmatrix}c&b\\b&a\end{vmatrix} + c\begin{vmatrix}c&a\\b&c\end{vmatrix}
     \\
-    \label{eq:label2}
-    \eqref{eq:label} && &=
+    \label{eq:2}
+    && &= a(a*a-b*c) - b(c*a-b*b) + c(c*c-a*b)
+    \\
+    \label{eq:3}
+    && &= a^3-abc-abc+b^3+c^3-abc
+    \\
+    \label{eq:4}
+    && &= a^3+b^3+c^3-3abc
 \end{align}
-\subsubsection*{ii) lorem ii :)}
 
 \subsection*{7.7 [14]}
+\setcounter{equation}{0}
 
-\subsubsection*{i) ipsum :)}
+Showing the details, evaluate:
+
+\begin{align}
+    \label{eq:1}
+    && \begin{vmatrix}
+    4&7&0&0\\
+    2&8&0&0\\
+    0&0&1&5\\
+    0&0&-2&2 \end{vmatrix} &= 4\begin{vmatrix}8&0&0\\0&1&5\\0&-2&2\end{vmatrix}-7\begin{vmatrix}2&0&0\\0&1&5\\0&-2&2\end{vmatrix} + 0+0
+    \\
+    \label{eq:2}
+    && &= 4 \begin{pmatrix} 8\begin{vmatrix}1&5\\-2&2 \end{vmatrix} +0+0\end{pmatrix}-7\begin{pmatrix}
+    2\begin{vmatrix}1&5\\-2&2\end{vmatrix}+0+0
+    \end{pmatrix}
+    \\
+    \label{eq:3}
+    && &= 32(1*2+2*5)-14(1*2+2*5)
+    \\
+    \label{eq:4}
+    && &= 216
+\end{align}
 
 \newpage
 
@@ -62,18 +337,204 @@
 \setcounter{equation}{0}
 
 \subsection*{7.8 [4]}
-\subsection*{7.8 [6]}
-\subsection*{7.8 [8]}
-
-\newpage
-
-\section*{8.1}
 \setcounter{equation}{0}
 
-\subsection*{8.1 [3]}
-\subsection*{8.1 [4]}
-\subsection*{8.1 [6]}
-\subsection*{8.1 [12]}
-\subsection*{8.1 [14]}
+Find the inverse by Gauss-Jordan. Check.
+
+\begin{align}
+    \label{eq:1}
+    && \textbf{A} &= \begin{bmatrix}
+    0&0&0.1\\
+    0&-0.4&0\\
+    2.5&0&0
+    \end{bmatrix}
+    \\
+    \label{eq:2}
+    \text{Make aug. mx:} && &\text{  } \begin{bmatrix}
+    0 & 0 & 0.1 &|& 1 & 0 & 0\\
+    0 & -0.4 & 0 &|& 0 & 1 & 0\\
+    2.5 & 0 & 0 &|& 0 & 0 & 1
+    \end{bmatrix}
+    \\
+    \label{eq:3}
+    \text{switch \textbf{R\textsubscript{1}}, \textbf{R\textsubscript{3}}} \longrightarrow && &\text{ } \begin{bmatrix}
+    2.5 & 0 & 0 &|& 0 & 0 & 1\\
+    0 & -0.4 & 0 &|& 0 & 1 & 0\\
+    0 & 0 & 0.1 &|& 1 & 0 & 0
+    \end{bmatrix}
+    \\
+    \label{eq:4}
+    \textbf{R\textsubscript{1}} = \frac{1}{2.5}\textbf{R\textsubscript{1}} \longrightarrow && &\text{ } \begin{bmatrix}
+    1 & 0 & 0 &|& 0 & 0 & 0.4\\
+    0 & -0.4 & 0 &|& 0 & 1 & 0\\
+    0 & 0 & 0.1 &|& 1 & 0 & 0
+    \end{bmatrix}
+    \\
+    \label{eq:5}
+    \textbf{R\textsubscript{2}} = -\frac{1}{0.4}\textbf{R\textsubscript{2}} \longrightarrow && &\text{ } \begin{bmatrix}
+    1 & 0 & 0 &|& 0 & 0 & 0.4\\
+    0 & 1 & 0 &|& 0 & -2.5 & 0\\
+    0 & 0 & 0.1 &|& 1 & 0 & 0
+    \end{bmatrix}
+    \\
+    \label{eq:6}
+    \textbf{R\textsubscript{3}} = \frac{1}{0.1}\textbf{R\textsubscript{3}} \longrightarrow && &\text{ } \begin{bmatrix}
+    1 & 0 & 0 &|& 0 & 0 & 0.4\\
+    0 & 1 & 0 &|& 0 & -2.5 & 0\\
+    0 & 0 & 1 &|& 10 & 0 & 0
+    \end{bmatrix}
+    \\
+    \label{eq:7}
+    \eqref{eq:6} && \textbf{A\textsuperscript{-1}} &= \begin{bmatrix}
+    0 & 0 & 0.4\\
+    0 & -2.5 & 0\\
+    10 & 0 & 0
+    \end{bmatrix}
+    \\
+    \label{eq:8}
+    \text{Check:} && \textbf{AA\textsuperscript{-1}} &= \begin{bmatrix}
+    0&0&0.1\\
+    0&-0.4&0\\
+    2.5&0&0
+    \end{bmatrix}\begin{bmatrix}
+    0 & 0 & 0.4\\
+    0 & -2.5 & 0\\
+    10 & 0 & 0
+    \end{bmatrix}
+    \\
+    \label{eq:9}
+    && &= \begin{bmatrix}
+    1&0&0\\
+    0&1&0\\
+    0&0&1
+    \end{bmatrix}
+    \\
+    \label{eq:10}
+    && &= \textbf{I}
+\end{align}
+
+\subsection*{7.8 [6]}
+\setcounter{equation}{0}
+
+Find the inverse by Gauss-Jordan. Check.
+
+\begin{align}
+    \label{eq:1}
+    && \textbf{A} &= \begin{bmatrix}
+    -4 & 0 & 0\\
+    0 & 8 & 13\\
+    0 & 3 & 5
+    \end{bmatrix}
+    \\
+    \label{eq:2}
+    \text{Make aug. mx.:} && &\text{ } \begin{bmatrix}
+    -4 & 0 & 0 &|& 1 & 0 & 0\\
+    0 & 8 & 13 &|& 0 & 1 & 0\\
+    0 & 3 & 5 &|& 0 & 0 & 1
+    \end{bmatrix}
+    \\
+    \label{eq:3}
+    \textbf{R\textsubscript{2}} = \textbf{R\textsubscript{2}} - \frac{13}{5}\textbf{R\textsubscript{3}} \longrightarrow && &\text{ } \begin{bmatrix}
+    -4 & 0 & 0 &|& 1 & 0 & 0\\
+    0 & \frac{1}{5} & 0 &|& 0 & 1 & -\frac{13}{5}\\
+    0 & 3 & 5 &|& 0 & 0 & 1
+    \end{bmatrix}
+    \\
+    \label{eq:4}
+    \textbf{R\textsubscript{3}} = \textbf{R\textsubscript{3}} -15\textbf{R\textsubscript{2}} \longrightarrow && &\text{ } \begin{bmatrix}
+    -4 & 0 & 0 &|& 1 & 0 & 0\\
+    0 & \frac{1}{5} & 0 &|& 0 & 1 & -\frac{13}{5}\\
+    0 & 0 & 5 &|& 0 & -15 & 40
+    \end{bmatrix}
+    \\
+    \label{eq:5}
+    \textbf{R\textsubscript{1}} = -\frac{1}{4}\textbf{R\textsubscript{1}} \longrightarrow && &\text{ } \begin{bmatrix}
+    1 & 0 & 0 &|& -\frac{1}{4} & 0 & 0\\
+    0 & \frac{1}{5} & 0 &|& 0 & 1 & -\frac{13}{5}\\
+    0 & 0 & 5 &|& 0 & -15 & 40
+    \end{bmatrix}
+    \\
+    \label{eq:6}
+    \textbf{R\textsubscript{2}} = 5\textbf{R\textsubscript{2}} \longrightarrow && &\text{ } \begin{bmatrix}
+    1 & 0 & 0 &|& -\frac{1}{4} & 0 & 0\\
+    0 & 1 & 0 &|& 0 & 5 & -13\\
+    0 & 0 & 5 &|& 0 & -15 & 40
+    \end{bmatrix}
+    \\
+    \label{eq:7}
+    \textbf{R\textsubscript{3}} = \frac{1}{5}\textbf{R\textsubscript{3}} \longrightarrow && &\text{ } \begin{bmatrix}
+    1 & 0 & 0 &|& -\frac{1}{4} & 0 & 0\\
+    0 & 1 & 0 &|& 0 & 5 & -13\\
+    0 & 0 & 1 &|& 0 & -3 & 8
+    \end{bmatrix}
+    \\
+    \label{eq:8}
+    \eqref{eq:7} && \textbf{A\textsuperscript{-1}} &= \begin{bmatrix}
+    -\frac{1}{4} & 0 & 0\\
+    0 & 5 & -13\\
+    0 & -3 & 8
+    \end{bmatrix}
+    \\
+    \label{eq:9}
+    \text{Check:} && \textbf{AA\textsuperscript{-1}} &= \begin{bmatrix}
+    -4 & 0 & 0\\
+    0 & 8 & 13\\
+    0 & 3 & 5
+    \end{bmatrix}\begin{bmatrix}
+    -\frac{1}{4} & 0 & 0\\
+    0 & 5 & -13\\
+    0 & -3 & 8
+    \end{bmatrix}
+    \\
+    \label{eq:10}
+    && &=\begin{bmatrix}
+    1&0&0\\
+    0&1&0\\
+    0&0&1
+    \end{bmatrix}
+    \\
+    \label{eq:11}
+    && &= \textbf{I}
+\end{align}
+
+\subsection*{7.8 [8]}
+\setcounter{equation}{0}
+
+Find the inverse by Gauss-Jordan. Check.
+
+\begin{align}
+    \label{eq:1}
+    && \textbf{A} &= \begin{bmatrix}
+    1 & 2 & 3\\
+    4 & 5 & 6\\
+    7 & 8 & 9
+    \end{bmatrix}
+    \\
+    \label{eq:2}
+    && \text{det \textbf{A}} &= \begin{vmatrix}
+    1 & 2 & 3\\
+    4 & 5 & 6\\
+    7 & 8 & 9
+    \end{vmatrix}
+    \\
+    \label{eq:3}
+    && &= 1\begin{vmatrix}
+    5 & 6\\ 8 & 9
+    \end{vmatrix} -2 \begin{vmatrix}
+    4 & 6\\ 7 & 9
+    \end{vmatrix} + 3\begin{vmatrix}
+    4 & 5\\7&8\end{vmatrix}
+    \\
+    \label{eq:4}
+    && &= (5*9-6*8)-2(4*9-7*6)+3(4*8-5*7)
+    \\
+    \label{eq:5}
+    && &= -3 +12 -9
+    \\
+    \label{eq:6}
+    && &= 0
+\end{align}
+
+Hence, the inverse of \textbf{A} does not exist.
 
 \end{document}
