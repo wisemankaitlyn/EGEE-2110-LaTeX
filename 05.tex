@@ -20,10 +20,165 @@
 
 {\large \noindent Problem Set:}
 
+\par 8.3 [1, 2, 3, 4, 5]
+\par 8.4 [1, 2, 9, 10]
+\par 9.1 [2, 6, 22]
 \par 9.2 [2, 4, 6, 8, 22, 36]
 \vspace{5mm}
 
 \noindent \hrulefill
+
+\section*{8.3}
+\setcounter{equation}{0}
+
+\subsection*{8.3 [1]}
+\setcounter{equation}{0}
+
+Is the following matrix symmetric, skew-symmetric, or orthogonal?  Find the spectrum of the matrix, thereby illustrating Theorems 1 and 5.
+
+\begin{align}
+    \label{eq:1}
+    && \textbf{A} &= \begin{bmatrix} 
+    0.8 & 0.6 \\
+    -0.6 & 0.8
+    \end{bmatrix}
+    \\
+    \label{eq:2}
+    && \textbf{A\textsuperscript{T}} &= \begin{bmatrix}
+    0.8 & -0.6\\
+    0.6 & 0.8
+    \end{bmatrix}
+    \\
+    \label{eq:3}
+    \eqref{eq:1}, \eqref{eq:2} && \textbf{AA\textsuperscript{T}} &= \begin{bmatrix}
+    0.8 & 0.6 \\
+    -0.6 & 0.8
+    \end{bmatrix} \begin{bmatrix}
+    0.8 & -0.6 \\
+    0.6 & 0.8
+    \end{bmatrix}
+    \\
+    \label{eq:4}
+    && &= \begin{bmatrix}
+    1 & 0\\
+    0 & 1
+    \end{bmatrix}
+    \\
+    \label{eq:5}
+    && &= \textbf{I}
+\end{align}
+
+Hence, \textbf{A} is an \textbf{orthogonal} matrix.
+
+\begin{align}
+    \label{eq:6}
+    \begin{vmatrix}
+    \textbf{A} - \lambda\textbf{I}
+    \end{vmatrix} = 0 \rightarrow && \begin{vmatrix}
+    (0.8-\lambda) & 0.6\\
+    -0.6 & (0.8 - \lambda)
+    \end{vmatrix} &= 0
+    \\
+    \label{eq:7}
+    && \lambda^2 -0.6\lambda +1 &= 0
+    \\
+    \label{eq:8}
+    && \lambda_1 &= 0.8 + 0.6j
+    \\
+    \label{eq:9}
+    && \lambda_2 &= 0.8 - 0.6j
+    \\
+    \label{eq:10}
+    && \begin{Vmatrix} \lambda_1 \end{Vmatrix} &= 1
+    \\
+    \label{eq:11}
+    && \begin{Vmatrix} \lambda_2 \end{Vmatrix} &= 1
+\end{align}
+
+The absolute magnitudes of each eigenvalue of this orthogonal matrix are 1, illustrating Theorem 5.
+
+\subsection*{8.3 [2]}
+\setcounter{equation}{0}
+
+Is the following matrix symmetric, skew-symmetric, or orthogonal?  Find the spectrum of the matrix, thereby illustrating Theorems 1 and 5.
+
+\begin{align}
+    \label{eq:1}
+    && \textbf{A} &= \begin{bmatrix}
+        a & b\\
+        -b & a
+    \end{bmatrix}
+    \\
+    \label{eq:2}
+    && \textbf{A\textsuperscript{T}} &= \begin{bmatrix}
+    a & -b\\
+    b & a
+    \end{bmatrix}
+\end{align}
+
+\textbf{A} is symmetric iff $b = 0$, skew-symmetric iff $a = 0$.
+
+\begin{align}
+    \label{eq:3}
+    && \textbf{AA\textsuperscript{T}} &= \begin{bmatrix} 
+    a & b\\
+    -b & a
+    \end{bmatrix} \begin{bmatrix} 
+    a & -b\\
+    b & a
+    \end{bmatrix}
+    \\
+    \label{eq:4}
+    && &= \begin{bmatrix}
+    a^2+b^2 & 0\\
+    0 & a^2+b^2
+    \end{bmatrix}
+    \\
+    \label{eq:5}
+    && &= \textbf{I}
+\end{align}
+
+if $a^2+b^2=1$, making \textbf{A} orthogonal.
+
+Find eigenvalues:
+
+\begin{align}
+    \label{eq:6}
+    \begin{vmatrix}
+    \textbf{A}-\lambda\textbf{I}
+    \end{vmatrix} = 0 \rightarrow && \begin{vmatrix}
+    (a-\lambda) & b\\
+    -b & (a-\lambda)
+    \end{vmatrix} &= 0
+    \\
+    \label{eq:7}
+    && \lambda ^2 -2a \lambda +a^2 + b^2 &= 0
+\end{align}
+
+\subsection*{8.3 [3]}
+\subsection*{8.3 [4]}
+\subsection*{8.3 [5]}
+
+\newpage
+
+\section*{8.4}
+\setcounter{equation}{0}
+
+\subsection*{8.4 [1]}
+\subsection*{8.4 [2]}
+\subsection*{8.4 [9]}
+\subsection*{8.4 [10]}
+
+\newpage
+
+\section*{9.1}
+\setcounter{equation}{0}
+
+\subsection*{9.1 [2]}
+\subsection*{9.1 [6]}
+\subsection*{9.1 [22]}
+
+\newpage
 
 \section*{9.2}
 \setcounter{equation}{0}
